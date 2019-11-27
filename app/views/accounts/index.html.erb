@@ -1,0 +1,11 @@
+<h3>All users available in system</h3>
+<% @users.each do |user|%>
+<% if user.admin? %>
+	<p style="color:red;" ><%= user.email%></p>
+<% else %>
+	<%= user.email%> <br>
+<% end %>
+
+<%end%>
+
+<%= link_to "Invite New", new_user_invitation_path, :class => 'navbar-link'  %> <br/>
