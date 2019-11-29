@@ -1,0 +1,34 @@
+<div id="wrapper">
+<div id="admin_dashboard" class="animate form">
+<h1>All Users In System</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>User Email</th>
+      <th>User Created_At</th>
+      <th>User Type</th>
+      
+    
+       
+    </tr>
+  </thead>
+			<% @users.each do |user|%>
+			<% if user.admin? %>
+				<p style="color:red;" >Admin: <%= user.email%></p>
+			<% else %>
+
+				<tr style="color: black;">
+					<td style="color: black;"><%= user.email %> </td>
+					<td style="color: black;"><%= user.created_at %> </td>
+					<td style="color: black;"><%= user.user_type %> </td>
+					
+			    </tr>
+   
+			<% end %>
+
+<%end%>
+</table>
+<%= link_to 'Back', accounts_path %>
+</div>
+
+</div>

@@ -1,8 +1,10 @@
+<div id="wrapper">
+<div id="appointment_dashboard" class="animate form">
 <p id="notice"><%= notice %></p>
 
 <h1>Appointments</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Created by</th>
@@ -18,7 +20,7 @@
         
         <td><%= appointment.created_by %></td>
         <td><%= appointment.description %></td>
-        <td><%= link_to 'Show', appointment %></td>
+        <td><%= link_to 'Show', appointment, class:"btn btn-warning"%></td>
         <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
         <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -29,3 +31,5 @@
 <br>
 
 <%= link_to 'New Appointment', new_appointment_path %>
+</div>
+</div>

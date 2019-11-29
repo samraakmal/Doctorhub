@@ -25,7 +25,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise'
 gem "bootstrap-sass-rails", "~> 2.2.2.0"
-
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+ 
 gem 'devise_invitable'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

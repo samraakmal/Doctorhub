@@ -1,11 +1,30 @@
-<h3>All users available in system</h3>
-<% @users.each do |user|%>
-<% if user.admin? %>
-	<p style="color:red;" ><%= user.email%></p>
-<% else %>
-	<%= user.email%> <br>
-<% end %>
+<div id="wrapper">
+<div id="admin_dashboard" class="animate form">
+	<h1>All Appointments</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Appointment_By</th>
+      <th>Description</th>
+      <th>Created At</th>
+      <th>Status</th>
+       
+    </tr>
+  </thead>
+  
+		<% @appoitnments&.each do |appointment|%>
 
-<%end%>
+			<tr style="color: black;">
+				<td style="color: black;"><%= appointment.created_by %> </td>
+				<td style="color: black;"><%= appointment.description %> </td>
+				<td style="color: black;"><%= appointment.created_at %> </td>
+						<td>  </td>
+		    </tr>
+	 
+		<% end %>
+</table>
 
+
+<%= link_to "Users",  accounts_users_accounts_path, :class => 'navbar-link'  %> <br/>
 <%= link_to "Invite New", new_user_invitation_path, :class => 'navbar-link'  %> <br/>
+</div>

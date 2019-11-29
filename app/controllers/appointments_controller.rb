@@ -11,13 +11,8 @@ class AppointmentsController < ApplicationController
   #   redirect_to '/appointments_path'
   # end
 # end
+  
   def index
-  #   if current_user.admin?
-
-  #     accounts_path
-  #   else
-  #     appointments_path
-  # end
   @appointments=current_user.appointments
   end
 

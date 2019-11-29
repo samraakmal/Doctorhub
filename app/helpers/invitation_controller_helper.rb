@@ -1,0 +1,2 @@
+module InvitationControllerHelper
+end

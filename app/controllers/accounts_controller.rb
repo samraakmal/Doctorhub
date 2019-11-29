@@ -1,8 +1,13 @@
 class AccountsController < ApplicationController
 	def index
 		@users = User.all
-		#@patient = Patient.all
+		 
 		@user = User.new
+		@appoitnments = Appointment.all
+  
+	end
+	def users
+		@users = User.all
 	end
 
 	def user_create
