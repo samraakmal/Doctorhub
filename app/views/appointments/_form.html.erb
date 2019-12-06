@@ -25,6 +25,12 @@
     <%= form.label :description %>
     <%= form.text_area :description %>
   </div>
+   <div class="field">
+   
+    <%#= form.select("post", "doctor_id", User.Doctor.map {|d| [ d.email, d.id ] }, { include_blank: true })%>
+    <%= form.select(:doctor_id, User.doctor.collect {|p| [p.email, p.id ]}, { :include_blank => 'select Doctor' }) %>
+    <%#= form.select("post", "doctor_id", User.where(user_type: 'Doctor').collect {|d| [ d.email, d.id ] }, { include_blank: true }) %>
+  </div>
     <%= form.hidden_field :user_id, :value => current_user.id %>
   <div class="actions">
     <%= form.submit %>

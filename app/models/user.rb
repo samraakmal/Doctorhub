@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :appointments
-
-  enum user_type: { Simple_User: 0, Patient: 1, Doctor: 2}
+  belongs_to :doctor, optional: true
+  enum user_type: { simple_user: 0, patient: 1, doctor: 2}
          
 end

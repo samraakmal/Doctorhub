@@ -1,5 +1,6 @@
 <div id="wrapper">
 <div id="login" class="animate form">
+
 <h2><%= t "devise.invitations.new.header" %></h2>
 
 <%= form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :post }) do |f| %>
@@ -9,7 +10,7 @@
     <div class="field">
       <%= f.label field %><br />
       <%= f.text_field field %>
-      <%= f.select :user_type, ['Patient', 'Doctor']%>
+      <%= f.select :user_type, ['patient', 'doctor']%>
     </div>
   <% end -%>
 

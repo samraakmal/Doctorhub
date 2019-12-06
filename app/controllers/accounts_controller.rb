@@ -9,6 +9,11 @@ class AccountsController < ApplicationController
 	def users
 		@users = User.all
 	end
+	def doctors
+
+		@appoitnments = Appointment.all
+
+	end
 
 	def user_create
 		@user = User.new(user_params)

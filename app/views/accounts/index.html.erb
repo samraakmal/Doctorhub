@@ -7,7 +7,10 @@
       <th>Appointment_By</th>
       <th>Description</th>
       <th>Created At</th>
+      <th>Appointment For</th>
       <th>Status</th>
+      <th>approve</th>
+      <th>Reject</th>
        
     </tr>
   </thead>
@@ -18,7 +21,19 @@
 				<td style="color: black;"><%= appointment.created_by %> </td>
 				<td style="color: black;"><%= appointment.description %> </td>
 				<td style="color: black;"><%= appointment.created_at %> </td>
-						<td>  </td>
+				<td style="color: black;"><%= appointment.doctor&.email %> </td>
+				<% if appointment.approved? %>
+					<td  class="btn btn-success" ><%= appointment.status %>
+				<% end %>
+				<% if appointment.rejected? %>
+					<td  class="btn btn-danger" ><%= appointment.status %>
+				<% end %>
+				<% if appointment.pending? %>
+					<td  class="btn btn-warning" ><%= appointment.status %>
+				<% end %>
+				</td>
+				<td style="color: white;"><%= link_to "Approve", appointments_status_appointment_path(id: appointment.id, status:"approved"), :method => 'post', class: "btn btn-primary"  %></td>
+				<td style="color: white;"><%= link_to "Reject", appointments_status_appointment_path(id: appointment.id, status:"rejected"), :method => 'post' , class: "btn btn-warning" %></td>			
 		    </tr>
 	 
 		<% end %>
@@ -28,3 +43,4 @@
 <%= link_to "Users",  accounts_users_accounts_path, :class => 'navbar-link'  %> <br/>
 <%= link_to "Invite New", new_user_invitation_path, :class => 'navbar-link'  %> <br/>
 </div>
+ 

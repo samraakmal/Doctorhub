@@ -1,7 +1,8 @@
  #login{
+
   position: absolute;
   top: 80px;
-  left: 150px;
+  left: 400px;
   width: 50%; 
   padding: 18px 6% 60px 6%;
   margin: 0 0 35px 0;
@@ -11,6 +12,12 @@
     0pt 2px 5px rgba(105, 108, 109,  0.7),  
     0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
   border-radius: 5px;
+}
+.Approved{
+  color: green;
+}
+.Rejected{
+  color: red;
 }
 #admin_dashboard{
   position: absolute;
@@ -45,6 +52,7 @@
 }
 
 #wrapper h1{
+
   font-size: 48px;
   color: rgb(6, 106, 117);
   padding: 2px 0 10px 0;
@@ -56,6 +64,7 @@
 
 /** For the moment only webkit supports the background-clip:text; */
 #wrapper h1{
+
   background: 
   -webkit-repeating-linear-gradient(-45deg, 
     rgb(18, 83, 93) , 
@@ -67,19 +76,71 @@
   -webkit-background-clip: text;
 }
 body  {
-  background-image: url("bg.jpg");
+   background:url('http://cdn.wallpapersafari.com/13/6/Mpsg2b.jpg');
+ /* background-image: url("bg.jpg");
   background-color: #cccccc;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;*/
+  margin:0px;
+  font-family: 'Ubuntu', sans-serif;
+  background-size: 100% 110%;
  background-size: 1900px 1000px;
   width: 100%;
 }
+.login-header {
+  color:black;
+  text-align:center;
+  font-size:300%;
+}
+.login-form {
+  border:.5px solid #fff;
+  background:yellow;
+  border-radius:10px;
+  box-shadow:0px 0px 10px #000;
+}
+.login-form h3 {
+  text-align:center;
+  
+  color:black;
+}
+.login-form {
+  box-sizing:border-box;
+  padding-top:15px;
+  padding-bottom:10%;
+  margin:5% auto;
+  text-align:center;
+}
+.login input[type="email"],
+.login input[type="password"] {
+  max-width:400px;
+  width: 80%;
+  line-height:3em;
+  font-family: 'Ubuntu', sans-serif;
+  margin:1em 2em;
+  border-radius:5px;
+  border:2px solid #f2f2f2;
+  outline:none;
+  padding-left:10px;
+}
+@media only screen and (min-width : 150px) and (max-width : 530px){
+  .login-form h3 {
+    text-align:center;
+    margin:0;
+  }
 
 .header {
   overflow: hidden;
   background-color: #f1f1f1;
-  padding: -20px -60px;
+ 
 }
-
+header{
+   padding: -20px -60px;
+   height: 48px;
+    transition: height 2s, padding 2s;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
 .header a {
   float: right;
   color: black;

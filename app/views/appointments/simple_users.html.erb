@@ -23,7 +23,7 @@
         <td><%= appointment.created_by %></td>
         <td><%= appointment.description %></td>
         <td><%= appointment.status %></td>
-        <td><%= appointment.doctor&.email %></td>
+          <td><%= appointment.doctor&.email %></td>
 
         <td><%= link_to 'Show', appointment, class:"btn btn-warning"%></td>
         <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
